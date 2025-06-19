@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: finance-tracker-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python render_bot.py
