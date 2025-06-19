@@ -2,10 +2,11 @@ services:
   - type: web
     name: telegram-finance-bot
     env: python
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python render_bot.py
     envVars:
       - key: TELEGRAM_BOT_TOKEN
-        value: 8041997489:AAGOXjZKl0Bxz-R1aYT7BdjOVacvKh2ylFA
+        sync: false
       - key: DATABASE_URL
-        value: postgresql://bot_user:Y4sOH3iW3rGGMhUyP9bo1mzbOnp7VxMO@dpg-d19v9smmcj7s73evkg8g-a.oregon-postgres.render.com/telegram_finance
+        sync: false
